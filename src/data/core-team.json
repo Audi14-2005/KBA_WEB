@@ -1,0 +1,392 @@
+{
+  "teams": [
+    {
+      "name": "Ambassador",
+      "members": [
+        {
+          "name": "Raghavan S",
+          "role": "Ambassador",
+          "linkedin": "https://www.linkedin.com/in/raghavan2005",
+          "photo": "/images/students/Raghavan.png"
+        },
+        {
+          "name": "Laksheta SV",
+          "role": "Ambassador",
+          "linkedin": "https://www.linkedin.com/in/laksheta-viswanath-b841842a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "photo": "/images/students/LakshetaSV.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Operations",
+      "members": [
+        {
+          "name": "Varsha Thomas",
+          "role": "Operation Executive",
+          "linkedin": "https://www.linkedin.com/in/varsha-thomas-4b79132a2/",
+          "photo": "/images/students/VARSHATHOMAS.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Technology Executives",
+      "members": [
+        {
+          "name": "Swetha J",
+          "role": "Technology Executive",
+          "linkedin": "https://www.linkedin.com/in/swetha-jagan-mohan-4377912a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "photo": "/images/students/SWETHAJ.jpeg"
+        }
+      ]
+    },
+    {
+      "name": "Secretary",
+      "members": [
+        {
+          "name": "Mymoon Beevi B",
+          "role": "Secretary",
+          "linkedin": "https://www.linkedin.com/in/mymoon-beevi-5b41842a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "photo": "/images/students/MYMOONBEEVI.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Treasurer",
+      "members": [
+        {
+          "name": "Tanisha C A",
+          "role": "Treasurer",
+          "linkedin": "https://www.linkedin.com/in/tanisha-c-a-03a8a62a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "photo": "/images/students/TANISHA.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Empowerment",
+      "members": [
+        {
+          "name": "Srivarshni S",
+          "role": "Empowerment Lead",
+          "linkedin": "https://www.linkedin.com/in/srivarshnis",
+          "photo": "/images/students/SRIVARSHNI.jpeg"
+        },
+        {
+          "name": "Girija",
+          "role": "Empowerment Team",
+          "linkedin": "https://www.linkedin.com/in/girija-s-p-943000311",
+          "photo": "/images/students/GIRIJA.jpg"
+        },
+        {
+          "name": "Tejaswin",
+          "role": "Empowerment Team",
+          "linkedin": "https://www.linkedin.com/in/tejas-g-63420a2a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "photo": "/images/students/TEJASWIN.jpg"
+        },
+        {
+          "name": "SUDHARSHAN KRISHNAA L K",
+          "role": "Empowerment Team",
+          "linkedin": "http://www.linkedin.com/in/l-k-sudharshan-krishnaa-b036b828a",
+          "photo": "/images/students/SUDHARSHAN.jpg"
+        },
+        {
+          "name": "Kamalesh S P",
+          "role": "Empowerment Team",
+          "linkedin": "https://www.linkedin.com/in/kamalesh-sp/",
+          "photo": "/images/students/Kamalesh.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Community Partners",
+      "members": [
+        {
+          "name": "Gokulakrishnan K",
+          "role": "Community Partner",
+          "linkedin": "https://in.linkedin.com/in/gokulakrishnan-k-5452962a2",
+          "photo": "/images/students/GOKULAKRISHNAN.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Design",
+      "members": [
+        {
+          "name": "HARIRAJ G",
+          "role": "Design Lead",
+          "linkedin": "https://www.linkedin.com/in/hariraj-g1406",
+          "photo": "/images/students/HARIRAJ.jpg"
+        },
+        {
+          "name": "DivyaDharsini K",
+          "role": "Design Co-Lead",
+          "linkedin": "https://www.linkedin.com/in/divya-dharshini-k-925832295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "photo": "/images/students/divyadharshini.jpg"
+        },
+        {
+          "name": "Veronica Regina Paul",
+          "role": "Design Team",
+          "linkedin": "https://www.linkedin.com/in/veronica-regina-paul-77aa59292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "photo": "/images/students/VERONICA.jpg"
+        },
+        {
+          "name": "Velan",
+          "role": "Design Team",
+          "linkedin": "https://www.linkedin.com/in/velan-arul-58b5742b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "photo": "/images/students/VELANARUL.jpeg"
+        },
+        {
+          "name": "Sreya G",
+          "role": "Design Team",
+          "linkedin": "https://www.linkedin.com/in/sreya-g-67220a2a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "photo": "/images/students/SREYAG.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Events",
+      "members": [
+        {
+          "name": "Sree Varssini K S",
+          "role": "Event Lead",
+          "linkedin": "https://www.linkedin.com/in/sree-varssini-k-s-b852102a2/",
+          "photo": "/images/students/SREEVARSSINI.jpg"
+        },
+        {
+          "name": "Sharvesh R",
+          "role": "Event Associate",
+          "linkedin": "https://www.linkedin.com/in/sarvesh-raghavan-b3bb0428a/",
+          "photo": "/images/students/SARVESHR.jpg"
+        },
+        {
+          "name": "Sreyaskari M",
+          "role": "Event Associate",
+          "linkedin": "https://www.linkedin.com/feed/",
+          "photo": "/images/students/SREYASKARI.jpg"
+        },
+        {
+          "name": "Madhumitha P",
+          "role": "Event Associate",
+          "linkedin": "https://www.linkedin.com/in/madhumithacse?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "photo": "/images/students/MADHUMITHA.jpg"
+        },
+        {
+          "name": "Ridhanya J",
+          "role": "Event Associate",
+          "linkedin": "https://www.linkedin.com/in/ridhanya-jayakandan-275a73294",
+          "photo": "/images/students/RIDHANYA.jpg"
+        }
+      ]
+    },
+    {
+      "name": "PR & Media",
+      "members": [
+        {
+          "name": "Miruthula KG",
+          "role": "PR Lead",
+          "linkedin": "https://www.linkedin.com/in/miruthula-gokul-37b6002a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "photo": "/images/students/MIRUTHULA.jpg"
+        },
+        {
+          "name": "Tejushree Sanjeevi Kumar",
+          "role": "PR Co-Lead",
+          "linkedin": "https://www.linkedin.com/in/tejushree-sanjeevikumar-20a3b72a2",
+          "photo": "/images/students/TEJUSHREE.jpg"
+        },
+        {
+          "name": "Rama Thulasi G",
+          "role": "PR Associate",
+          "linkedin": "https://www.linkedin.com/in/rama-thulasi-g-1a20802a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "photo": "/images/students/RamaThulasiG.jpg"
+        },
+        {
+          "name": "SarveshWar P",
+          "role": "PR Associate",
+          "linkedin": "https://www.linkedin.com/in/sarveshwar-p-a0264431b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "photo": "/images/students/SarveshwarP.jpg"
+        },
+        {
+          "name": "Madhumitha B M",
+          "role": "PR Associate",
+          "linkedin": "https://www.linkedin.com/in/madhumithacse?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "photo": "/images/students/MadhumithaBM.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Research",
+      "members": [
+        {
+          "name": "Monic Auditya A",
+          "role": "Research Lead",
+          "linkedin": "https://www.linkedin.com/in/monic-auditya-a-b8bb68295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "photo": "/images/students/MonicAudityaA.jpg"
+        },
+        {
+          "name": "Subramanian N",
+          "role": "Research Associate",
+          "linkedin": "https://www.linkedin.com/in/subramanian-n-5589122a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "photo": "/images/students/SubramanianN.jpg"
+        },
+        {
+          "name": "Manisha G",
+          "role": "Research Associate",
+          "linkedin": "https://www.linkedin.com/in/manishaa-gurunathan-6000792a2/",
+          "photo": "/images/students/ManishaG.webp"
+        },
+        {
+          "name": "Thirumurugan",
+          "role": "Research Associate",
+          "linkedin": "https://www.linkedin.com/in/thiru-murugan-912b422a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "photo": "/images/students/Thirumurugan.jpg"
+        },
+        {
+          "name": "Deepa S",
+          "role": "Research Associate",
+          "linkedin": "https://www.linkedin.com/in/deepa-sureshkumar",
+          "photo": "/images/students/DeepaS.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Technology",
+      "members": [
+        {
+          "name": "Manicka Meenakshi S",
+          "role": "Tech Lead",
+          "linkedin": "https://www.linkedin.com/in/manicka-meenakshi-somu-6481852a2",
+          "photo": "/images/students/ManickaMeenakshiS.jpg"
+        },
+        {
+          "name": "Ganeshan M",
+          "role": "Tech Co-Lead",
+          "linkedin": "https://www.linkedin.com/in/ganeshan-m-6336432a4?trk=contact-info",
+          "photo": "/images/students/GaneshanM.jpeg"
+        },
+        {
+          "name": "Prathyush R",
+          "role": "Full Stack Developer",
+          "linkedin": "https://www.linkedin.com/in/prathyush-r/",
+          "photo": "/images/students/PrathyushR.jpg"
+        },
+        {
+          "name": "Uma AL",
+          "role": "Full Stack Developer",
+          "linkedin": "https://www.linkedin.com/in/uma-al-7583b52a2/",
+          "photo": "/images/students/UmaAL.jpeg"
+        },
+        {
+          "name": "Kumaran S",
+          "role": "Full Stack Developer",
+          "linkedin": "https://www.linkedin.com/in/kumaran-s-3446012a2/",
+          "photo": "/images/students/KumaranS.jpg"
+        },
+        {
+          "name": "DAYANITHI V",
+          "role": "Full Stack Developer",
+          "linkedin": "https://www.linkedin.com/in/dhayanithi-venkatesan13",
+          "photo": "/images/students/DayanithiV.jpg"
+        },
+        {
+          "name": "Pranav Kumar J",
+          "role": "Cloud Engineer",
+          "linkedin": "www.linkedin.com/in/pranaav-kumar-611503290",
+          "photo": "/images/students/PranavKumarJ.jpg"
+        },
+        {
+          "name": "Vishwak S",
+          "role": "Cloud Engineer",
+          "linkedin": "www.linkedin.com/in/vishwak-sudarsanan-1a4a53294",
+          "photo": "/images/students/VishwakS.jpg"
+        },
+        {
+          "name": "Kannan R",
+          "role": "Embedded Engineer",
+          "linkedin": "https://www.linkedin.com/in/kannan2006?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "photo": "/images/students/KannanR.jpg"
+        },
+        {
+          "name": "S Darshan",
+          "role": "Tech Associate",
+          "linkedin": "https://www.linkedin.com/in/darshannns",
+          "photo": "/images/students/SDarshan.jpg"
+        },
+        {
+          "name": "Farheen Tabassum H",
+          "role": "Tech Associate",
+          "linkedin": "https://www.linkedin.com/in/farheen-tabassum-h-8526042a2?",
+          "photo": "/images/students/FarheenTabassumH.jpg"
+        },
+        {
+          "name": "Subramanian S",
+          "role": "Tech Associate",
+          "linkedin": "https://www.linkedin.com/in/subramanian-seenuvasan-1633b62a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "photo": "/images/students/SubramanianS.jpg"
+        },
+        {
+          "name": "Ashna V",
+          "role": "Tech Associate",
+          "linkedin": "https://www.linkedin.com/in/ashna-v-2a51772a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "photo": "/images/students/AshnaV.jpeg"
+        },
+        {
+          "name": "Monish D.Y.",
+          "role": "Tech Associate",
+          "linkedin": "https://www.linkedin.com/in/monish-deva-anandan-4161872a2",
+          "photo": "/images/students/DYM.png"
+        },
+        {
+          "name": "Monish G.",
+          "role": "Tech Associate",
+          "linkedin": "https://www.linkedin.com/in/monish-g-0181842a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "photo": "/images/students/monishg.png"
+        }
+      ]
+    },
+    {
+      "name": "Blockchain",
+      "members": [
+        {
+          "name": "Jagadeshwaran Parthiban",
+          "role": "Blockchain Lead",
+          "linkedin": "https://www.linkedin.com/in/jagadeshwaran-parthiban-34407b2a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "photo": "/images/students/JagadeshwaranParthiban.jpg"
+        },
+        {
+          "name": "Srihari S",
+          "role": "Blockchain Associate",
+          "linkedin": "https://www.linkedin.com/in/srihari-s-b56149298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "photo": "/images/students/SrihariS.jpg"
+        },
+        {
+          "name": "Keshavallu B",
+          "role": "Blockchain Associate",
+          "linkedin": "www.linkedin.com/in/keshavallu-b-b67737378",
+          "photo": "/images/students/KeshavalluB.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Media",
+      "members": [
+        {
+          "name": "Renithjoel R R",
+          "role": "Media Associate",
+          "linkedin": "https://www.linkedin.com/in/renith-joel-r-r-75651b320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "photo": "/images/students/RenithjoelRR.jpg"
+        },
+        {
+          "name": "Shanmuganathan S",
+          "role": "Media Associate",
+          "linkedin": "https://www.linkedin.com/in/shanmuganathansakthivel?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "photo": "/images/students/ShanmuganathanS.jpg"
+        },
+        {
+          "name": "Giridharan E",
+          "role": "Media Associate",
+          "linkedin": "https://www.linkedin.com/in/giri-dharan-e-94681535a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "photo": "/images/students/GiridharanE.jpg"
+        }
+      ]
+    }
+  ]
+}

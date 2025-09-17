@@ -1,0 +1,328 @@
+/* Countdown Styles */
+
+/* Scoped Reset - only apply to countdown elements */
+.countdown-container * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.countdown-active {
+    overflow: hidden;
+}
+
+/* Ensure all styles are scoped to countdown container */
+.countdown-container {
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    text-align: center;
+}
+
+.countdown-container .website-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+    filter: blur(2px);
+    transition: all 2s ease-in-out;
+}
+
+.countdown-container .website-background iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: none;
+}
+
+.countdown-container .countdown-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(26, 10, 46, 0.95) 0%, rgba(22, 33, 62, 0.9) 25%, rgba(15, 52, 96, 0.85) 50%, rgba(83, 58, 113, 0.9) 100%);
+    z-index: 1000;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.countdown-container .main-content {
+    position: relative;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: clamp(20px, 3vw, 30px);
+    padding: clamp(2rem, 4vw, 3rem);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    animation: slideIn 2s ease-out;
+    max-width: 90vw;
+    width: 100%;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.countdown-container .countdown-overlay h1 {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    margin-bottom: clamp(0.5rem, 2vw, 1rem);
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    line-height: 1.1;
+}
+
+.countdown-container .tagline {
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    font-weight: 300;
+    color: #e0e7ff;
+    margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.countdown-container .launch-text {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+    color: #cbd5e1;
+    font-weight: 400;
+}
+
+.countdown-container #countdown {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(1rem, 3vw, 2rem);
+    justify-content: center;
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .countdown-container #countdown {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.countdown-container .time-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    padding: clamp(1rem, 3vw, 2rem) clamp(0.75rem, 2vw, 1.5rem);
+    border-radius: clamp(15px, 2.5vw, 20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    min-width: 100px;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.countdown-container .time-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
+    animation: scanLine 3s ease-in-out infinite;
+}
+
+@keyframes scanLine {
+    0% {
+        left: -100%;
+    }
+
+    50% {
+        left: 100%;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+.countdown-container .number {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.countdown-container .label {
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
+    color: #e2e8f0;
+    margin-top: clamp(0.25rem, 1vw, 0.5rem);
+    display: block;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.countdown-container .countdown-overlay footer {
+    position: fixed;
+    bottom: clamp(15px, 3vw, 30px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    color: #94a3b8;
+    font-weight: 400;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 0 1rem;
+    max-width: 90vw;
+}
+
+.countdown-container .launch-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(0, 255, 136, 0.9), rgba(0, 204, 255, 0.8), rgba(255, 107, 107, 0.9));
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: celebrationPulse 2s ease-in-out;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+@keyframes celebrationPulse {
+    0%,
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+.countdown-container .confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f0f;
+    animation: confetti-fall 5s ease-in-out infinite;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+.countdown-container .grand-opening-text {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    margin-bottom: 2rem;
+    text-align: center;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.countdown-container .enter-site-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    backdrop-filter: blur(5px);
+    animation: bounce 2s infinite;
+}
+
+.countdown-container .enter-site-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.countdown-container .loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(26, 10, 46, 0.98) 0%, rgba(22, 33, 62, 0.95) 25%, rgba(15, 52, 96, 0.92) 50%, rgba(83, 58, 113, 0.95) 100%);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut 1s ease-out 2s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.countdown-container .spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

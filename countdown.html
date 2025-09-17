@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>KBA REC – Coming Soon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: transparent;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .website-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+            filter: blur(2px);
+            transition: all 2s ease-in-out;
+        }
+
+        .website-background iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            pointer-events: none;
+        }
+
+        .countdown-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, rgba(26, 10, 46, 0.95) 0%, rgba(22, 33, 62, 0.9) 25%, rgba(15, 52, 96, 0.85) 50%, rgba(83, 58, 113, 0.9) 100%);
+            z-index: 5;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .main-content {
+            position: relative;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: clamp(20px, 3vw, 30px);
+            padding: clamp(2rem, 4vw, 3rem);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            animation: slideIn 2s ease-out;
+            max-width: 90vw;
+            width: 100%;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            margin-bottom: clamp(0.5rem, 2vw, 1rem);
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            line-height: 1.1;
+        }
+
+        .tagline {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            font-weight: 300;
+            color: #e0e7ff;
+            margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .launch-text {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            margin-bottom: clamp(1.5rem, 3vw, 2rem);
+            color: #cbd5e1;
+            font-weight: 400;
+        }
+
+        #countdown {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: clamp(1rem, 3vw, 2rem);
+            justify-content: center;
+            margin-bottom: clamp(1.5rem, 3vw, 2rem);
+            max-width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            #countdown {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+
+
+
+        .time-box {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            padding: clamp(1rem, 3vw, 2rem) clamp(0.75rem, 2vw, 1.5rem);
+            border-radius: clamp(15px, 2.5vw, 20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            min-width: 100px;
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .time-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
+            animation: scanLine 3s ease-in-out infinite;
+        }
+
+        @keyframes scanLine {
+            0% {
+                left: -100%;
+            }
+
+            50% {
+                left: 100%;
+            }
+
+            100% {
+                left: -100%;
+            }
+        }
+
+        .number {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .label {
+            font-size: clamp(0.75rem, 1.5vw, 1rem);
+            color: #e2e8f0;
+            margin-top: clamp(0.25rem, 1vw, 0.5rem);
+            display: block;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            position: fixed;
+            bottom: clamp(15px, 3vw, 30px);
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: clamp(0.8rem, 1.5vw, 1rem);
+            color: #94a3b8;
+            font-weight: 400;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            padding: 0 1rem;
+            max-width: 90vw;
+        }
+
+        .launch-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, rgba(0, 255, 136, 0.9), rgba(0, 204, 255, 0.8), rgba(255, 107, 107, 0.9));
+            z-index: 1000;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: celebrationPulse 2s ease-in-out;
+            padding: 1rem;
+            overflow: hidden;
+        }
+
+        @keyframes celebrationPulse {
+            0%,
+            100% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #f0f;
+            animation: confetti-fall 5s ease-in-out infinite;
+        }
+        
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        
+        .grand-opening-text {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 900;
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            margin-bottom: 2rem;
+            text-align: center;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        
+        .enter-site-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+            backdrop-filter: blur(5px);
+            animation: bounce 2s infinite;
+        }
+        
+        .enter-site-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, rgba(26, 10, 46, 0.98) 0%, rgba(22, 33, 62, 0.95) 25%, rgba(15, 52, 96, 0.92) 50%, rgba(83, 58, 113, 0.95) 100%);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeOut 1s ease-out 2s forwards;
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 6px solid rgba(255, 255, 255, 0.3);
+            border-top-color: #ffffff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="website-background">
+        <iframe src="https://kba.ai" frameborder="0"></iframe>
+    </div>
+
+    <div class="countdown-overlay">
+        <div class="main-content">
+            <h1>KBA REC</h1>
+            <p class="tagline"> At KBA, we don't follow trends, <br>we build the chain that defines them.</p>
+            <p class="launch-text">Launching Soon:</p>
+
+            <div id="countdown">
+                <div class="time-box">
+                    <span class="number" id="days">00</span>
+                    <span class="label">Days</span>
+                </div>
+                <div class="time-box">
+                    <span class="number" id="hours">00</span>
+                    <span class="label">Hours</span>
+                </div>
+                <div class="time-box">
+                    <span class="number" id="minutes">00</span>
+                    <span class="label">Minutes</span>
+                </div>
+                <div class="time-box">
+                    <span class="number" id="seconds">00</span>
+                    <span class="label">Seconds</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 KBA REC. All rights reserved.
+    </footer>
+
+    <div class="launch-animation" id="launchAnimation">
+        <div class="grand-opening-text">🎉 GRAND OPENING 🎉</div>
+        <h1 style="color:white; font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 2rem;">KBA REC IS NOW LIVE!</h1>
+        <button class="enter-site-btn" onclick="window.location.href='https://kba.ai'">ENTER WEBSITE</button>
+        <!-- Confetti elements will be added by JavaScript -->
+    </div>
+
+    <script>
+        // Create confetti elements
+        function createConfetti() {
+            const launchAnimation = document.getElementById('launchAnimation');
+            const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff', '#ffffff'];
+            
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.animationDelay = Math.random() * 5 + 's';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.width = Math.random() * 10 + 5 + 'px';
+                confetti.style.height = Math.random() * 10 + 5 + 'px';
+                launchAnimation.appendChild(confetti);
+            }
+        }
+
+        const countdown = () => {
+            // Set countdown to today at 8:50 PM
+            const today = new Date();
+            const countDate = new Date(today.getFullYear(), today.getMonth(), today.getDate(), 20, 50, 0).getTime();
+            const now = new Date().getTime();
+            const gap = countDate - now;
+
+            const second = 1000;
+            const minute = second * 60;
+            const hour = minute * 60;
+            const day = hour * 24;
+
+            const textDay = Math.floor(gap / day);
+            const textHour = Math.floor((gap % day) / hour);
+            const textMinute = Math.floor((gap % hour) / minute);
+            const textSecond = Math.floor((gap % minute) / second);
+
+            document.getElementById("days").innerText = textDay < 10 ? '0' + textDay : textDay;
+            document.getElementById("hours").innerText = textHour < 10 ? '0' + textHour : textHour;
+            document.getElementById("minutes").innerText = textMinute < 10 ? '0' + textMinute : textMinute;
+            document.getElementById("seconds").innerText = textSecond < 10 ? '0' + textSecond : textSecond;
+
+            if (gap < 0) {
+                document.querySelector(".countdown-overlay").style.display = "none";
+                const launchAnimation = document.getElementById("launchAnimation");
+                launchAnimation.style.display = "flex";
+                
+                // Create confetti only once when the countdown ends
+                if (!launchAnimation.dataset.confettiCreated) {
+                    createConfetti();
+                    launchAnimation.dataset.confettiCreated = 'true';
+                }
+            }
+        };
+
+        // Run countdown immediately and then every second
+        countdown();
+        setInterval(countdown, 1000);
+    </script>
+</body>
+
+</html>
