@@ -4,7 +4,7 @@ import { Footer } from './components/footer'
 import HomePage from './pages/HomePage'
 import EventsPage from './pages/EventsPage'
 import { TransitionProvider } from './components/transition-provider'
-import { Countdown } from './components/Countdown'
+import { Countdown } from './components/countdown'
 import { useState, useEffect } from 'react'
 import './styles/countdown.css'
 
@@ -12,19 +12,11 @@ import './styles/countdown.css'
 // localStorage.removeItem('countdownCompleted');
 
 function App() {
-  const [showCountdown, setShowCountdown] = useState(() => {
-    // Check localStorage to see if countdown has been completed
-    const countdownCompleted = localStorage.getItem('countdownCompleted');
-    return countdownCompleted !== 'true';
-  });
+  const [showCountdown, setShowCountdown] = useState(true);
   
   useEffect(() => {
-    // Add the countdown-active class to the body when countdown is active
-    if (showCountdown) {
-      document.body.classList.add('countdown-active');
-    } else {
-      document.body.classList.remove('countdown-active');
-    }
+    // Always show countdown until the target date is reached
+    document.body.classList.add('countdown-active');
   }, [showCountdown]);
 
   const handleCountdownComplete = () => {

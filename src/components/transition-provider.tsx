@@ -2,11 +2,11 @@
 
 import type React from "react"
 import { useEffect, useState } from "react"
-import { usePathname } from "next/navigation"
+import { useLocation } from "react-router-dom"
 import { AnimatePresence, motion } from "framer-motion"
 
 export function TransitionProvider({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname()
+  const location = useLocation()
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
@@ -20,13 +20,13 @@ export function TransitionProvider({ children }: { children: React.ReactNode }) 
     setIsLoading(true)
     const t = setTimeout(() => setIsLoading(false), 450)
     return () => clearTimeout(t)
-  }, [pathname])
+  }, [location.pathname])
 
   return (
     <>
       <AnimatePresence mode="wait" initial={false}>
         <motion.div
-          key={pathname || "page"}
+          key={location.pathname || "page"}
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -12 }}
