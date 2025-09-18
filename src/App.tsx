@@ -12,7 +12,7 @@ function App() {
   const [showCountdown, setShowCountdown] = useState(true);
 
   useEffect(() => {
-    const targetDate = new Date(2025, 8, 18, 11, 8, 0); // 18 Sept 2025, 10:00 AM
+    const targetDate = new Date(2025, 8, 18, 12, 15, 0); // 18 Sept 2025, 10:00 AM
     const now = new Date();
 
     // If already past → skip countdown
