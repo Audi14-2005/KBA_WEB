@@ -14,7 +14,7 @@ export function Countdown({ targetDate, onComplete }: CountdownProps) {
 
   useEffect(() => {
     const calculateCountdown = () => {
-      const countDate = targetDate || new Date(2025, 8, 18, 10, 45, 0);
+      const countDate = targetDate || new Date(2025, 8, 18, 11, 0, 0);
       const now = new Date();
       const gap = countDate.getTime() - now.getTime();
 
